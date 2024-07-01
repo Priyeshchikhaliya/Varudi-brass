@@ -1,12 +1,16 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 import Headerbar from "./HeaderBar";
+import Footer from "./Footer";
 
 function Layout(props) {
   return (
-    <div className="relative flex flex-col no-scrollbar max-w-[1920px] overflow-y-hidden max-h-fit">
-      <div className={`h-fit flex flex-col w-full overflow-hidden`}>
+    <div className="relative flex flex-col min-h-screen">
+      <div className="sticky top-0 flex-shrink-0 z-10">
         <Headerbar />
+      </div>
+      <div className="flex-grow flex justify-center">{props.children}</div>
+      <div className="flex-shrink-0">
+        <Footer />
       </div>
     </div>
   );
