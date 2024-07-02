@@ -40,18 +40,17 @@
   src: url("./assets/Fonts//Nunito-SemiBold.ttf");
 } */
 
-/* Hide scrollbar */
-@layer utilities {
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+
+/* Hide scrollbar for Firefox */
+body {
+  scrollbar-width: none;
 }
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 :root {
   font-family: "Nunito Medium";

@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../Layout/Layout";
 
-//Assets
+// Assets
 import phone_icon from "../assets/phone_icon.svg";
 import mail_icon from "../assets/mail_icon.svg";
 import location_icon from "../assets/location_icon.svg";
@@ -9,39 +9,43 @@ import location_icon from "../assets/location_icon.svg";
 function ContactUs() {
   return (
     <Layout>
-      <div className="select-none flex flex-col gap-4 w-full max-w-[960px] py-2">
-        <p className="text-[18px] font-bold">Contact us</p>
-        <p className="text-[16px] font-bold">We're here to help</p>
-        <div className="flex flex-col gap-4">
-          <div className="flex gap-2">
+      <div className="flex flex-col gap-4 max-w-[960px] px-4 py-2 mx-auto">
+        <p className="text-[24px] font-bold text-center">Contact Us</p>
+        <p className="text-[18px] font-bold text-center">We're here to help</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Contact Info Section */}
+          <div className="flex gap-4 items-center">
             <div className="bg-[#F2F0E8] rounded-xl h-[48px] w-[48px] flex justify-center items-center">
-              <img src={phone_icon} alt="" />
+              <img src={phone_icon} alt="Phone Icon" />
             </div>
-            <div className="flex flex-col gap-1">
-              <p className=" text-[16px]">+91 90335 15720</p>
-              <p className="text-[#96874F] text-[14px]">
+            <div>
+              <p className="text-[18px] font-semibold">+91 90335 15720</p>
+              <p className="text-[14px] text-[#96874F]">
                 Monday - Friday: 8am - 5pm IST
               </p>
             </div>
           </div>
-          <div className="flex gap-2">
+
+          <div className="flex gap-4 items-center">
             <div className="bg-[#F2F0E8] rounded-xl h-[48px] w-[48px] flex justify-center items-center">
-              <img src={mail_icon} alt="" />
+              <img src={mail_icon} alt="Mail Icon" />
             </div>
-            <div className="flex flex-col gap-1">
-              <p className=" text-[16px]">General inquiries</p>
-              <p className="text-[#96874F] text-[14px]">
+            <div>
+              <p className="text-[18px] font-semibold">General inquiries</p>
+              <p className="text-[14px] text-[#96874F]">
                 mail@varudi-brass.com
               </p>
             </div>
-          </div>{" "}
-          <div className="flex gap-2">
+          </div>
+
+          <div className="flex gap-4 items-center">
             <div className="bg-[#F2F0E8] rounded-xl h-[48px] w-[48px] flex justify-center items-center">
-              <img src={location_icon} alt="" />
+              <img src={location_icon} alt="Location Icon" />
             </div>
-            <div className="flex flex-col gap-1">
-              <p className=" text-[16px]">Varudi Brass</p>
-              <p className="text-[#96874F] text-[14px]">Jamnagar,Gujarat</p>
+            <div>
+              <p className="text-[18px] font-semibold">Varudi Brass</p>
+              <p className="text-[14px] text-[#96874F]">Jamnagar, Gujarat</p>
             </div>
           </div>
         </div>
