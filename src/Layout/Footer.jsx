@@ -11,7 +11,7 @@ function Footer() {
         About us
       </Link>
       <p className="font-bold text-gray-700 mb-2 md:mb-0">
-        Copyright@2024 Varudi Brass
+        Copyright@2024 Sardar Brass
       </p>
       <Link
         to="/contact-us"

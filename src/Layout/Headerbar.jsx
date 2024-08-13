@@ -16,10 +16,10 @@ function Headerbar() {
         <img
           className="cursor-pointer h-[45px] w-[45px] rounded-md"
           src={Logo}
-          alt="Varudi Brass"
+          alt="Sardar Brass"
         />
         <p className="cursor-pointer select-none text-lg font-bold text-orange-600">
-          Varudi Brass
+          Sardar Brass
         </p>
       </Link>
 

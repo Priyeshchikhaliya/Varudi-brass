@@ -34,7 +34,7 @@ function ContactUs() {
             <div>
               <p className="text-[18px] font-semibold">General inquiries</p>
               <p className="text-[14px] text-[#96874F]">
-                mail@varudi-brass.com
+                mail@sardar-brass.com
               </p>
             </div>
           </div>
@@ -44,7 +44,7 @@ function ContactUs() {
               <img src={location_icon} alt="Location Icon" />
             </div>
             <div>
-              <p className="text-[18px] font-semibold">Varudi Brass</p>
+              <p className="text-[18px] font-semibold">Sardar Brass</p>
               <p className="text-[14px] text-[#96874F]">Jamnagar, Gujarat</p>
             </div>
           </div>

@@ -14,7 +14,7 @@ const Category = () => {
 
   return (
     <Layout>
-      <div className="py-2 pb-8 flex flex-col gap-4 px-4 md:px-8">
+      <div className="py-2 pb-8 flex flex-col gap-4 px-4 md:px-8 max-w-[960px]">
         {/* Section 1 */}
         <div className="relative py-2 select-none">
           <img
@@ -33,15 +33,15 @@ const Category = () => {
         {/* Section 2 */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {categoryData.products.map((product) => (
-            <div key={product.name} className="cursor-pointer">
+            <div
+              key={product.name}
+              className="cursor-pointer bg-white transition-all duration-200 transform hover:scale-105 rounded-lg overflow-hidden shadow-md"
+            >
               <img
                 src={product.image}
                 alt={product.name}
-                className="h-[150px] sm:h-[200px] w-full object-cover mb-2 rounded-xl"
+                className={`${product.name} h-[150px] sm:h-[200px] w-full object-contain mb-2 rounded-xl`}
               />
-              <p className="text-center text-[14px] sm:text-[16px]">
-                {product.name}
-              </p>
             </div>
           ))}
         </div>

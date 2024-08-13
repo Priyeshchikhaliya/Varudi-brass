@@ -80,21 +80,15 @@ function Home() {
             Featured categories
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 justify-items-center">
-            <img
-              className="rounded-md cursor-pointer w-full sm:w-auto"
-              src={section2_1}
-              alt="Section 2-1"
-            />
-            <img
-              className="rounded-md cursor-pointer w-full sm:w-auto"
-              src={section2_2}
-              alt="Section 2-2"
-            />
-            <img
-              className="rounded-md cursor-pointer w-full sm:w-auto"
-              src={section2_3}
-              alt="Section 2-3"
-            />
+            <div className="rounded-md cursor-pointer w-full sm:w-auto transition-all duration-200 transform hover:scale-105">
+              <img src={section2_1} alt="Section 2-1" />
+            </div>
+            <div className="rounded-md cursor-pointer w-full sm:w-auto transition-all duration-200 transform hover:scale-105">
+              <img src={section2_2} alt="Section 2-2" />
+            </div>
+            <div className="rounded-md cursor-pointer w-full sm:w-auto transition-all duration-200 transform hover:scale-105">
+              <img src={section2_3} alt="Section 2-3" />
+            </div>
           </div>
         </div>
         {/* Section 3 */}
@@ -110,23 +104,18 @@ function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 justify-items-center">
-            <img
-              className="rounded-md cursor-pointer w-full sm:w-auto"
-              src={section3_1}
-              alt="Section 3-1"
-            />
-            <img
-              className="rounded-md cursor-pointer w-full sm:w-auto"
-              src={section3_2}
-              alt="Section 3-2"
-            />
-            <img
-              className="rounded-md cursor-pointer w-full sm:w-auto"
-              src={section3_3}
-              alt="Section 3-3"
-            />
+            <div className="rounded-md cursor-pointer w-full sm:w-auto transition-all duration-200 transform hover:scale-105">
+              <img src={section3_1} alt="Section 3-1" />
+            </div>
+            <div className="rounded-md cursor-pointer w-full sm:w-auto transition-all duration-200 transform hover:scale-105">
+              <img src={section3_2} alt="Section 3-2" />
+            </div>
+            <div className="rounded-md cursor-pointer w-full sm:w-auto transition-all duration-200 transform hover:scale-105">
+              <img src={section3_3} alt="Section 3-3" />
+            </div>
           </div>
         </div>
+
         {/* Section 4 */}
         <div className="relative py-2 select-none">
           <img
