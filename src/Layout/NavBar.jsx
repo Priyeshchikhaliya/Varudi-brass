@@ -10,13 +10,15 @@ function NavBar() {
   };
 
   return (
-    <nav className="w-full px-4 md:px-8 flex items-center justify-between min-h-[65px] border-b border-b-[#E5E8EB] bg-white">
-      {/* Logo and Brand Name */}
+    <nav
+      className="w-full px-4 md:px-8 flex items-center justify-between min-h-[65px] border-b border-b-[#E5E8EB] bg-white"
+      aria-label="Main Navigation"
+    >
       <Link to="/home" className="flex items-center gap-2">
         <img
           className="cursor-pointer h-[45px] w-[45px] rounded-md"
           src={Logo}
-          alt="Sardar Brass"
+          alt="Sardar Industries Logo - Leading Brass Products Manufacturer"
         />
         <p className="cursor-pointer select-none text-lg font-bold text-orange-600">
           Sardar Industries
@@ -36,6 +38,7 @@ function NavBar() {
         <button
           onClick={toggleMenu}
           className="focus:outline-none flex items-center justify-center"
+          aria-label="Toggle Menu"
         >
           <svg
             className="w-6 h-6 text-orange-600"

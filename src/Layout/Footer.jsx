@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="w-full p-4 border-t border-t-[#E5E8EB] text-center select-none flex flex-col md:flex-row items-center justify-center">
+    <footer
+      className="w-full p-4 border-t border-t-[#E5E8EB] text-center select-none flex flex-col md:flex-row items-center justify-center"
+      aria-label="Footer"
+    >
       <Link
         to="/about"
         className="cursor-pointer font-bold text-gray-700 hover:text-orange-600 transition-colors duration-300 mb-2 md:mb-0 md:mr-8"
