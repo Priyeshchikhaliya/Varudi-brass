@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.svg";
 
-function Headerbar() {
+function HeaderBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -90,4 +90,4 @@ function NavLink({ to, children, onClick }) {
   );
 }
 
-export default Headerbar;
+export default HeaderBar;
