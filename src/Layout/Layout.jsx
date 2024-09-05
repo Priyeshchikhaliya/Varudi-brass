@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
-import HeaderBar from "./HeaderBar"; 
 import Footer from "./Footer";
+import NavBar from "./NavBar";
 
 function Layout(props) {
   const { pathname } = useLocation();
@@ -20,7 +20,7 @@ function Layout(props) {
     <div className="flex flex-col min-h-screen">
       {/* Header */}
       <header className="sticky top-0 z-10">
-        <HeaderBar />
+        <NavBar />
       </header>
 
       {/* Main content */}
