@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/Varudi brass.png";
+import Logo from "../assets/Logo.svg";
 
 function Headerbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,7 +19,7 @@ function Headerbar() {
           alt="Sardar Brass"
         />
         <p className="cursor-pointer select-none text-lg font-bold text-orange-600">
-          Sardar Brass
+          Sardar Industries
         </p>
       </Link>
 

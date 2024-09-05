@@ -55,6 +55,23 @@ const categories = [
     ],
   },
   {
+    name: "Brass cable gland",
+    mainImage: brassCableGlandMain,
+    products: [
+      { name: "Product 1", image: brassCableGlandProduct1 },
+      { name: "Product 2", image: brassCableGlandProduct2 },
+      { name: "Product 3", image: brassCableGlandProduct3 },
+      { name: "Product 4", image: brassCableGlandProduct4 },
+      { name: "Product 5", image: brassCableGlandProduct5 },
+      { name: "Product 6", image: brassCableGlandProduct6 },
+      { name: "Product 7", image: brassCableGlandProduct7 },
+      { name: "Product 8", image: brassCableGlandProduct8 },
+      { name: "Product 9", image: brassCableGlandProduct9 },
+      { name: "Product 10", image: brassCableGlandProduct10 },
+      { name: "Product 11", image: brassCableGlandProduct11 },
+    ],
+  },
+  {
     name: "Electrical components",
     mainImage: electricalComponentsMain,
     products: [
@@ -89,23 +106,7 @@ const categories = [
       { name: "Product 2", image: brassValvesProduct3 },
     ],
   },
-  {
-    name: "Brass cable gland",
-    mainImage: brassCableGlandMain,
-    products: [
-      { name: "Product 1", image: brassCableGlandProduct1 },
-      { name: "Product 2", image: brassCableGlandProduct2 },
-      { name: "Product 3", image: brassCableGlandProduct3 },
-      { name: "Product 4", image: brassCableGlandProduct4 },
-      { name: "Product 5", image: brassCableGlandProduct5 },
-      { name: "Product 6", image: brassCableGlandProduct6 },
-      { name: "Product 7", image: brassCableGlandProduct7 },
-      { name: "Product 8", image: brassCableGlandProduct8 },
-      { name: "Product 9", image: brassCableGlandProduct9 },
-      { name: "Product 10", image: brassCableGlandProduct10 },
-      { name: "Product 11", image: brassCableGlandProduct11 },
-    ],
-  },
+
 ];
 
 export default categories;
