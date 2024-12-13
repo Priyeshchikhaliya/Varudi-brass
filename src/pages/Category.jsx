@@ -1,5 +1,4 @@
-import React from "react";
-import { Helmet } from "react-helmet-async"; // Import Helmet for SEO
+import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 import categories from "../Data/categories";
 import Layout from "../Layout/Layout";
@@ -44,38 +43,42 @@ const Category = () => {
         />
       </Helmet>
 
-      <div className="py-2 pb-8 flex flex-col gap-4 px-4 md:px-8 max-w-[960px]">
-        {/* Section 1 */}
-        <div className="relative py-2 select-none">
-          <img
-            className="rounded-md h-[200px] sm:h-[300px] md:h-[400px] w-full object-cover"
-            src={product_listing}
-            alt={`Overview of ${categoryData.name} Brass Products`}
-          />
-          <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center text-center px-4">
-            <div className="flex flex-col gap-2 text-white max-w-[800px]">
-              <h1 className="text-[24px] sm:text-[36px] md:text-[48px] font-bold">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 select-none">
+        {/* Hero Section */}
+        <div className="relative w-full mb-8">
+          <div className="aspect-[21/9] w-full overflow-hidden">
+            <img
+              className="w-full h-full object-cover"
+              src={product_listing}
+              alt={`Overview of ${categoryData.name} Brass Products`}
+            />
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center px-4">
                 {categoryData.name}
               </h1>
             </div>
           </div>
         </div>
 
-        {/* Section 2 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {/* Products Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {categoryData.products.map((product) => (
             <div
               key={product.name}
-              className="cursor-pointer bg-white transition-all duration-200 transform hover:scale-105 rounded-lg overflow-hidden shadow-md"
+              className="group cursor-pointer bg-white hover:shadow-xl transition-all duration-200 border border-gray-100"
             >
-              <img
-                src={product.image}
-                alt={`Image of ${product.name} from ${categoryData.name}`}
-                className={`h-[150px] sm:h-[200px] w-full object-contain mb-2 rounded-xl`}
-              />
-              <p className="text-center font-semibold text-[14px] sm:text-[16px]">
-                {product.name}
-              </p>
+              <div className="aspect-square w-full overflow-hidden bg-gray-50">
+                <img
+                  src={product.image}
+                  alt={`Image of ${product.name} from ${categoryData.name}`}
+                  className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-200"
+                />
+              </div>
+              <div className="p-4">
+                <p className="text-base sm:text-lg font-semibold text-gray-800 text-center">
+                  {product.name}
+                </p>
+              </div>
             </div>
           ))}
         </div>

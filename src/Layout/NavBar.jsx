@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react/prop-types */
+import  { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.svg";
 
@@ -11,7 +12,7 @@ function NavBar() {
 
   return (
     <nav
-      className="w-full px-4 md:px-8 flex items-center justify-between min-h-[65px] border-b border-b-[#E5E8EB] bg-white"
+      className="w-full px-4 md:px-8 flex items-center justify-between min-h-[65px] border-b border-b-[#E5E8EB] bg-white select-none"
       aria-label="Main Navigation"
     >
       <Link to="/home" className="flex items-center gap-2">

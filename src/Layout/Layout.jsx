@@ -1,4 +1,5 @@
-import React, { useEffect, useLayoutEffect } from "react";
+/* eslint-disable react/prop-types */
+import  { useEffect, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
