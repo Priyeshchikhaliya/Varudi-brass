@@ -6,7 +6,6 @@ import brassCableGlandMain from "../assets/products/brass-cable-gland/Brass cabl
 import transformerFittingsMain from "../assets/products/transformer-fittings/Transformer fittings.jpeg";
 import brassValvesMain from "../assets/products/brass-valves/Brass valves.jpeg";
 
-// Import product images (reusing main images for demonstration)
 import brassAutoPartsProduct1 from "../assets/products/brass-auto-parts/Products/1.jpg";
 import brassAutoPartsProduct2 from "../assets/products/brass-auto-parts/Products/2.jpg";
 import brassAutoPartsProduct3 from "../assets/products/brass-auto-parts/Products/3.jpg";
