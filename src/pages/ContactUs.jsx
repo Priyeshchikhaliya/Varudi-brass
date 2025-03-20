@@ -32,7 +32,7 @@ function ContactUs() {
 
       try {
         // Coordinates for the address: GIDC Phase III, Jamnagar, Gujarat
-        const location = { lat: 22.4707, lng: 70.0577 }; // These are approximate coordinates
+        const location = { lat: 22.411289, lng: 70.050362 }; // These are approximate coordinates
 
         const mapOptions = {
           center: location,
