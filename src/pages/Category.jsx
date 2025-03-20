@@ -1,12 +1,26 @@
 import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import categories from "../Data/categories";
 import Layout from "../Layout/Layout";
 import product_listing from "../assets/product_listing.png";
+import ImageLightbox from "../Components/ImageLightbox";
 
 const Category = () => {
   const { category } = useParams();
   const categoryData = categories.find((cat) => cat.name === category);
+
+  // State for lightbox
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedAlt, setSelectedAlt] = useState("");
+
+  // Function to open lightbox with the selected image
+  const openLightbox = (image, alt) => {
+    setSelectedImage(image);
+    setSelectedAlt(alt);
+    setLightboxOpen(true);
+  };
 
   if (!categoryData) {
     return <p>Category not found</p>;
@@ -66,6 +80,12 @@ const Category = () => {
             <div
               key={product.name}
               className="group cursor-pointer bg-white hover:shadow-xl transition-all duration-200 border border-gray-100"
+              onClick={() =>
+                openLightbox(
+                  product.image,
+                  `Image of ${product.name} from ${categoryData.name}`
+                )
+              }
             >
               <div className="aspect-square w-full overflow-hidden bg-gray-50">
                 <img
@@ -83,6 +103,14 @@ const Category = () => {
           ))}
         </div>
       </div>
+
+      {/* Image Lightbox */}
+      <ImageLightbox
+        isOpen={lightboxOpen}
+        setIsOpen={setLightboxOpen}
+        image={selectedImage}
+        altText={selectedAlt}
+      />
     </Layout>
   );
 };
