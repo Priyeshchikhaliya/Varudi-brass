@@ -4,12 +4,12 @@ import Layout from "../Layout/Layout";
 import { Link } from "react-router-dom";
 import section1 from "../assets/section1.png";
 import section1_1 from "../assets/section1_1.png";
-import section2_1 from "../assets/section2_1.png";
-import section2_2 from "../assets/section2_2.png";
-import section2_3 from "../assets/section2_3.png";
-import section3_1 from "../assets/section3_1.png";
-import section3_2 from "../assets/section3_2.png";
-import section3_3 from "../assets/section3_3.png";
+import section2_1 from "../assets/products/transformer-fittings/Products/2.jpg";
+import section2_2 from "../assets/products/brass-auto-parts/Products/8.jpg";
+import section2_3 from "../assets/products/sanatory-components/Products/2.jpeg";
+import section3_1 from "../assets/products/electrical-components/Products/3.jpg";
+import section3_2 from "../assets/products/electrical-components/Products/6.jpg";
+import section3_3 from "../assets/products/brass-auto-parts/Products/4.jpg";
 import section4 from "../assets/section4.png";
 
 function Home() {
@@ -92,68 +92,150 @@ function Home() {
             </div>
           </div>
         </div>
+        {/* Featured Categories Section */}
+        <div className="w-full px-2 sm:px-4 py-12 md:py-16">
+          <div className="w-full max-w-screen-2xl mx-auto">
+            <h2 className="text-[28px] sm:text-[38px] font-bold text-gray-900 mb-10 px-2">
+              Featured Categories
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+              {/* Category Card 1 */}
+              <Link to="/products/Transformer%20fittings">
+                <div className="group overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
+                  <div className="h-[280px] md:h-[320px] overflow-hidden">
+                    <img
+                      src={section2_1}
+                      alt="Precision Brass Components"
+                      className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="px-4 py-3 bg-gray-100 border-t border-gray-200">
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      Precision Brass Components
+                    </h3>
+                  </div>
+                </div>
+              </Link>
 
-        {/* Section 2 */}
-        <div className="w-full flex flex-col justify-center bg-white px-4 md:px-8 lg:px-16 py-16">
-          <h2 className="text-[28px] sm:text-[42px] font-bold text-black mb-8">
-            Featured Categories
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
-            <div className="w-full h-[300px] md:h-[400px] cursor-pointer transition-all duration-200 transform hover:scale-105">
-              <img
-                src={section2_1}
-                alt="High-quality Brass Products"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="w-full h-[300px] md:h-[400px] cursor-pointer transition-all duration-200 transform hover:scale-105">
-              <img
-                src={section2_2}
-                alt="Custom Brass Fittings"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="w-full h-[300px] md:h-[400px] cursor-pointer transition-all duration-200 transform hover:scale-105">
-              <img
-                src={section2_3}
-                alt="Decorative Brass Hardware"
-                className="w-full h-full object-cover"
-              />
+              {/* Category Card 2 */}
+              <Link to="/products/Brass%20auto%20parts">
+                <div className="group overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
+                  <div className="h-[280px] md:h-[320px] overflow-hidden">
+                    <img
+                      src={section2_2}
+                      alt="Premium Brass Fittings"
+                      className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="px-4 py-3 bg-gray-100 border-t border-gray-200">
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      Premium Brass Fittings
+                    </h3>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Category Card 3 */}
+              <Link to="/products/Sanatory%20components">
+                <div className="group overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
+                  <div className="h-[280px] md:h-[320px] overflow-hidden">
+                    <img
+                      src={section2_3}
+                      alt="Custom Machined Parts"
+                      className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="px-4 py-3 bg-gray-100 border-t border-gray-200">
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      Custom Machined Parts
+                    </h3>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
 
-        {/* Section 3 */}
-        <div className="w-full flex flex-col justify-center bg-gray-50 px-4 md:px-8 lg:px-16 py-16">
-          <h2 className="text-[28px] sm:text-[42px] font-bold text-black mb-4">
-            Why Choose Us?
-          </h2>
-          <p className="text-[16px] sm:text-[18px] font-medium text-black max-w-[800px] mb-8">
-            With over 30 years of experience, we&apos;ve earned a reputation for
-            excellence. Here are a few reasons to consider us for your next
-            project.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
-            <div className="w-full h-[300px] md:h-[400px] cursor-pointer transition-all duration-200 transform hover:scale-105">
-              <img
-                src={section3_1}
-                alt="Quality Craftsmanship"
-                className="w-full h-full object-cover"
-              />
+        {/* Why Choose Us Section */}
+        <div className="w-full px-2 sm:px-4 py-12 md:py-16">
+          <div className="w-full max-w-screen-2xl mx-auto">
+            <div className="px-2">
+              <h2 className="text-[28px] sm:text-[38px] font-bold text-gray-900 mb-4">
+                Why Choose Us?
+              </h2>
+              <p className="text-lg text-gray-700 mb-10 max-w-3xl">
+                With over 30 years of experience, we've earned a reputation for
+                excellence. Here are a few reasons to consider us for your next
+                project.
+              </p>
             </div>
-            <div className="w-full h-[300px] md:h-[400px] cursor-pointer transition-all duration-200 transform hover:scale-105">
-              <img
-                src={section3_2}
-                alt="Expert Design Team"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="w-full h-[300px] md:h-[400px] cursor-pointer transition-all duration-200 transform hover:scale-105">
-              <img
-                src={section3_3}
-                alt="Trusted Global Partner"
-                className="w-full h-full object-cover"
-              />
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+              {/* Reason Card 1 */}
+              <Link to="/products/Electrical%20and%20Ground%20accessories">
+                <div className="bg-white overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
+                  <div className="h-[240px] md:h-[280px] overflow-hidden">
+                    <img
+                      src={section3_1}
+                      alt="Precision Craftsmanship"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="px-5 py-4 border-t border-gray-200">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                      Precision Craftsmanship
+                    </h3>
+                    <p className="text-gray-600">
+                      Our skilled artisans ensure every product meets the
+                      highest standards of quality and durability.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Reason Card 2 */}
+              <Link to="/products/Electrical%20and%20Ground%20accessories">
+                <div className="bg-white overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
+                  <div className="h-[240px] md:h-[280px] overflow-hidden">
+                    <img
+                      src={section3_2}
+                      alt="Custom Solutions"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="px-5 py-4 border-t border-gray-200">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                      Custom Solutions
+                    </h3>
+                    <p className="text-gray-600">
+                      We specialize in creating bespoke brass components
+                      tailored to your exact specifications.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Reason Card 3 */}
+              <Link to="/products/Brass%20auto%20parts">
+                <div className="bg-white overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
+                  <div className="h-[240px] md:h-[280px] overflow-hidden">
+                    <img
+                      src={section3_3}
+                      alt="Industry Expertise"
+                      className="w-full h-full object-contain rotate-90"
+                    />
+                  </div>
+                  <div className="px-5 py-4 border-t border-gray-200">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                      Industry Expertise
+                    </h3>
+                    <p className="text-gray-600">
+                      Our decades of experience allow us to deliver superior
+                      products across various industries.
+                    </p>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
