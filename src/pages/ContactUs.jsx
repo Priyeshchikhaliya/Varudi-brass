@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async"; // Import Helmet for SEO
 import Layout from "../Layout/Layout";
 
@@ -37,20 +37,20 @@ function ContactUs() {
         const mapOptions = {
           center: location,
           zoom: 15,
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          mapTypeId: window.google.maps.MapTypeId.ROADMAP,
         };
 
-        const map = new google.maps.Map(mapRef.current, mapOptions);
+        const map = new window.google.maps.Map(mapRef.current, mapOptions);
 
         // Add marker
-        const marker = new google.maps.Marker({
+        const marker = new window.google.maps.Marker({
           position: location,
           map: map,
           title: "Sardar Industries",
         });
 
         // Add info window
-        const infowindow = new google.maps.InfoWindow({
+        const infowindow = new window.google.maps.InfoWindow({
           content: `
             <div style="padding: 8px; max-width: 240px;">
               <h3 style="font-weight: bold; margin-bottom: 5px; font-size: 16px;">Sardar Industries</h3>
@@ -65,6 +65,38 @@ function ContactUs() {
 
         // Open info window by default
         infowindow.open(map, marker);
+
+        // Add a custom control for navigation
+        const navigationControlDiv = document.createElement("div");
+        navigationControlDiv.className = "custom-map-control";
+        navigationControlDiv.style.backgroundColor = "#EA580C";
+        navigationControlDiv.style.borderRadius = "3px";
+        navigationControlDiv.style.boxShadow = "0 2px 6px rgba(0,0,0,.3)";
+        navigationControlDiv.style.cursor = "pointer";
+        navigationControlDiv.style.marginRight = "10px";
+        navigationControlDiv.style.textAlign = "center";
+        navigationControlDiv.title = "Navigate to this location";
+
+        const controlUI = document.createElement("div");
+        controlUI.style.color = "#fff";
+        controlUI.style.fontFamily = "Roboto,Arial,sans-serif";
+        controlUI.style.fontSize = "16px";
+        controlUI.style.lineHeight = "38px";
+        controlUI.style.paddingLeft = "5px";
+        controlUI.style.paddingRight = "5px";
+        controlUI.innerHTML = "Get Directions";
+        navigationControlDiv.appendChild(controlUI);
+
+        navigationControlDiv.addEventListener("click", () => {
+          window.open(
+            `https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}&destination_place_id=Sardar+Industries`,
+            "_blank"
+          );
+        });
+
+        map.controls[window.google.maps.ControlPosition.TOP_RIGHT].push(
+          navigationControlDiv
+        );
       } catch (error) {
         console.error("Google Maps initialization error:", error);
         // Set state to show fallback content
@@ -178,12 +210,12 @@ function ContactUs() {
                 Please try again later or contact us directly for directions.
               </p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=22.4707,70.0577"
+                href="https://www.google.com/maps/dir/?api=1&destination=22.411289,70.050362&destination_place_id=Sardar+Industries"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
               >
-                Open in Google Maps
+                Get Directions
               </a>
             </div>
           ) : (
