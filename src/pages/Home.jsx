@@ -7,6 +7,7 @@ import section1_1 from "../assets/section1_1.png";
 import section2_1 from "../assets/products/transformer-fittings/Products/2.jpg";
 import section2_2 from "../assets/products/brass-auto-parts/Products/8.jpg";
 import section2_3 from "../assets/products/sanatory-components/Products/2.jpeg";
+import section2_4 from "../assets/products/brass-auto-parts/Products/9.jpeg";
 import section3_1 from "../assets/products/electrical-components/Products/3.jpg";
 import section3_2 from "../assets/products/electrical-components/Products/6.jpg";
 import section3_3 from "../assets/products/brass-auto-parts/Products/4.jpg";
@@ -98,7 +99,7 @@ function Home() {
             <h2 className="text-[28px] sm:text-[38px] font-bold text-gray-900 mb-10 px-2">
               Featured Categories
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {/* Category Card 1 */}
               <Link to="/products/Transformer%20fittings">
                 <div className="group overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
@@ -148,6 +149,24 @@ function Home() {
                   <div className="px-4 py-3 bg-gray-100 border-t border-gray-200">
                     <h3 className="text-lg font-semibold text-gray-800">
                       Custom Machined Parts
+                    </h3>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Category Card 4 */}
+              <Link to="/products/Brass%20auto%20parts">
+                <div className="group overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
+                  <div className="h-[280px] md:h-[320px] overflow-hidden">
+                    <img
+                      src={section2_4}
+                      alt="Premium Brass Fittings"
+                      className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="px-4 py-3 bg-gray-100 border-t border-gray-200">
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      Premium Brass Auto Parts
                     </h3>
                   </div>
                 </div>

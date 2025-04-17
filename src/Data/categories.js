@@ -14,7 +14,7 @@ import brassAutoPartsProduct5 from "../assets/products/brass-auto-parts/Products
 import brassAutoPartsProduct6 from "../assets/products/brass-auto-parts/Products/6.jpg";
 import brassAutoPartsProduct7 from "../assets/products/brass-auto-parts/Products/7.jpg";
 import brassAutoPartsProduct8 from "../assets/products/brass-auto-parts/Products/8.jpg";
-
+import brassAutoPartsProduct9 from "../assets/products/brass-auto-parts/Products/9.jpeg";
 
 import electricalComponentsProduct1 from "../assets/products/electrical-components/Products/1.jpg";
 import electricalComponentsProduct2 from "../assets/products/electrical-components/Products/2.jpg";
@@ -62,7 +62,7 @@ const categories = [
       { name: "Product 6", image: brassAutoPartsProduct6 },
       { name: "Product 7", image: brassAutoPartsProduct7 },
       { name: "Product 8", image: brassAutoPartsProduct8 },
-    ],
+      { name: "Product 9", image: brassAutoPartsProduct9 },],
   },
   {
     name: "Brass cable gland",
