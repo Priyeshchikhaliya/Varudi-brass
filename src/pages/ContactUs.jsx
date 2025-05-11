@@ -175,7 +175,7 @@ function ContactUs() {
                   href="mailto:mail@sardar-brass.com"
                   className="hover:underline"
                 >
-                  sales@sardarind.com
+                  info@sardarind.com
                 </a>
               </p>
             </div>
