@@ -147,7 +147,7 @@ function ContactUs() {
       <div className="flex flex-col gap-4 max-w-[960px] px-4 py-2 mx-auto">
         <h1 className="text-[24px] font-bold text-center">Contact Us</h1>
         <h2 className="text-[18px] font-bold text-center">
-          We're Here to Help
+          We&apos;re Here to Help
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -175,7 +175,7 @@ function ContactUs() {
                   href="mailto:mail@sardar-brass.com"
                   className="hover:underline"
                 >
-                  info@sardarind.com
+                  Diken@sardarind.com
                 </a>
               </p>
             </div>
