@@ -172,7 +172,7 @@ function ContactUs() {
               <p className="text-[18px] font-semibold">General Inquiries</p>
               <p className="text-[14px] text-[#96874F]">
                 <a
-                  href="mailto:mail@sardar-brass.com"
+                  href="mailto:Diken@sardarind.com"
                   className="hover:underline"
                 >
                   Diken@sardarind.com
